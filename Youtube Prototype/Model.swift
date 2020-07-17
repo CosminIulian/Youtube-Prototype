@@ -9,7 +9,15 @@
 import Foundation
 
 
+protocol ModelDelegate {
+    
+    func videosReturn(_ videos: [Video])
+}
+
+
 class Model {
+    
+    var delegate: ModelDelegate?
     
     func getVideos() {
         
@@ -42,7 +50,12 @@ class Model {
                 
                 let response = try decoder.decode(Response.self, from: data!)
                 
-                dump(response)
+                if response.items != nil {
+                    //  Call the "videosReturn" method
+                    DispatchQueue.main.async {
+                        self.delegate?.videosReturn(response.items!)
+                    }
+                }
                 
             } catch {
                 print("ERROR: Parsing the data into  video objects")
