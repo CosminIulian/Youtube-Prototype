@@ -10,10 +10,10 @@ import Foundation
 
 struct Video: Decodable {
     
-    var videoId = ""
-    var title = ""
-    var description = ""
-    var thumbnail = ""
+    var videoId: String?
+    var title: String?
+    var description: String?
+    var thumbnail: String?
     var published = Date()
     
     enum CodingKeys: String, CodingKey {
