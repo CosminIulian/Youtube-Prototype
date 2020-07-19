@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3973463024BE11BA0030C2F0"
-               BuildableName = "Youtube Prototype.app"
+               BuildableName = "YT-Prototype.app"
                BlueprintName = "Youtube Prototype"
                ReferencedContainer = "container:Youtube Prototype.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3973463024BE11BA0030C2F0"
-            BuildableName = "Youtube Prototype.app"
+            BuildableName = "YT-Prototype.app"
             BlueprintName = "Youtube Prototype"
             ReferencedContainer = "container:Youtube Prototype.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3973463024BE11BA0030C2F0"
-            BuildableName = "Youtube Prototype.app"
+            BuildableName = "YT-Prototype.app"
             BlueprintName = "Youtube Prototype"
             ReferencedContainer = "container:Youtube Prototype.xcodeproj">
          </BuildableReference>

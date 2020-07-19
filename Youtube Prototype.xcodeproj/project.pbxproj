@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3973463124BE11BA0030C2F0 /* Youtube Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3973463124BE11BA0030C2F0 /* YT-Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT-Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3973463424BE11BA0030C2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3973463624BE11BA0030C2F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3973463824BE11BA0030C2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		3973463224BE11BA0030C2F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3973463124BE11BA0030C2F0 /* Youtube Prototype.app */,
+				3973463124BE11BA0030C2F0 /* YT-Prototype.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			);
 			name = "Youtube Prototype";
 			productName = "Youtube Prototype";
-			productReference = 3973463124BE11BA0030C2F0 /* Youtube Prototype.app */;
+			productReference = 3973463124BE11BA0030C2F0 /* YT-Prototype.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.cosminiulian.Youtube-Prototype";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "YT-Prototype";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.cosminiulian.Youtube-Prototype";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "YT-Prototype";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

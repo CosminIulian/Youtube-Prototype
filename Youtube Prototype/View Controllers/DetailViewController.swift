@@ -19,17 +19,13 @@ class DetailViewController: UIViewController {
     var video: Video?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
         // Clear the fields
         titleLabel.text = ""
         dateLabel.text = ""
         textView.text = ""
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         // Check if there's a video
         guard video != nil else { return }
