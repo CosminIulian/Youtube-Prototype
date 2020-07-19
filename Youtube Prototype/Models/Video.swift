@@ -13,8 +13,8 @@ struct Video: Decodable {
     var videoId: String?
     var title: String?
     var description: String?
-    var thumbnail: String?
-    var published = Date()
+    var thumbnailUrlString: String?
+    var publishedDate = Date()
     
     enum CodingKeys: String, CodingKey {
         // For accesing what we need
@@ -43,14 +43,14 @@ struct Video: Decodable {
         self.description = try snippetContainer.decode(String.self, forKey: .description)
         
         // Parse the publish date
-        self.published = try snippetContainer.decode(Date.self, forKey: .published)
+        self.publishedDate = try snippetContainer.decode(Date.self, forKey: .published)
         
         // Parse thumbnail
         let thumbnailsContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
         
         let highContainer = try thumbnailsContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
         
-        self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
+        self.thumbnailUrlString = try highContainer.decode(String.self, forKey: .thumbnail)
         
         // Parse Video Id
         let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)

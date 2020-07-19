@@ -34,15 +34,13 @@ class VideoTableViewCell: UITableViewCell {
         self.titleLabel.text = video?.title
         
         // Set the date label
-        let df = DateFormatter()
-        df.dateFormat = "EEEE, MMM d, yyyy"
-        self.dateLabel.text = df.string(from: video!.published)
+        self.dateLabel.text = DateManager.getDateFormat(video!.publishedDate)
         
         // Set the thumbnail
-        guard video?.thumbnail != nil else { return }
+        guard video?.thumbnailUrlString != nil else { return }
         
         // Check cache before downloading data
-        if let cachedData = CacheManager.getVideoCache(self.video!.thumbnail!) {
+        if let cachedData = CacheManager.getVideoCache(self.video!.thumbnailUrlString!) {
             
             // Set the thumbnail imageview
             self.thumbnailImageView.image = UIImage(data: cachedData)
@@ -50,7 +48,7 @@ class VideoTableViewCell: UITableViewCell {
         }
         
         // Download the thumbnail data
-        let url = URL(string: self.video!.thumbnail!)
+        let url = URL(string: self.video!.thumbnailUrlString!)
         
         // Get the shared URL Session Object
         let session = URLSession.shared
@@ -64,7 +62,7 @@ class VideoTableViewCell: UITableViewCell {
                 CacheManager.setVideoCache(url!.absoluteString, data)
                 
                 // Check that the downloaded url matches the video thumbnail url that this cell is currently set to display
-                if url!.absoluteString != self.video?.thumbnail {
+                if url!.absoluteString != self.video?.thumbnailUrlString {
                     // Video cell has been recycled for another video and no longer matches the thumbnail that was download
                     return
                 }
